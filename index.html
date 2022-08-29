@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Class 7</title>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Custom styling-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Nav Bar-->
+    <header id="navbar1" class="position-sticky top-0">
+        <nav  class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+              <a class="navbar-brand" href="javascript:void(0)"><img  src="images/logo1.png" alt="" width="120"  class="d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)">Assignment</a>
+                  </li>
+                 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Chapter
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item text-info" href="javascript:void(0)">Rounding number</a></li>
+                      <li><a class="dropdown-item text-info" href="javascript:void(0)">Generating random number</a></li>
+                      <li><a class="dropdown-item text-info" href="javascript:void(0)">Converting string to int &amp; dec</a></li>
+                      <li><a class="dropdown-item text-info" href="javascript:void(0)">Converting string to number</a></li>
+                      <li><a class="dropdown-item text-info" href="javascript:void(0)">Controlling the length of decimals</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+       </nav>
+    </header>
+    <main>
+        <div class="py-5">
+            <div class="container">
+                <div class="row mb-3 mb-md-5">
+                    <div class="col">
+                        <h3 class="text-center">Chapter # 26-30 | Number,Integers &amp; Decimals</h3>
+                        <div class="border-bottom mt-4 border-secondary"></div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                        <div class="h-100">
+                            <h4 class="text-center">Input</h4>
+                            <div class="border rounded-3 p-4 d-flex align-items-center" style="height: 122px;">
+                                <div class="input-group">
+                                    <input type="text" id="inputText" class="form-control form-control-lg bg-transparent " placeholder="Type your text here" aria-label="Username">
+                                     <button class="btn btn-outline-secondary" id="clear" onclick="clearInput() ">Clear</button>
+                                    
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="h-100">
+                            <h4 class="text-center">Original Number</h4>
+                            <div id="color2" class="border rounded-3 p-4 originalStringBox"  style="height: 122px; ">
+                                <div id="originalNumberBox" class="text-center">
+                                    <h2>25.12345</h2>
+                                </div>
+   
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                        <div class="h-100">
+                            <h4 class="text-center">Buttons</h4>
+                            <div id="border" class=" box button border rounded-3 p-4 text-center " >
+                                <button class="btn btn-danger" onclick="roundNumber()">Round A Number</button>
+                                <button class="btn btn-danger" onclick="ceilNumber()">Ceil A Number</button>
+                                <button class="btn btn-danger" onclick="floorNumber()">Floor A Number</button>
+                                <button class="btn btn-danger" onclick="generateRandomNumber()">Generate A Random Number</button>
+                                <button class="btn btn-danger" onclick="throwNumber()">Throw A Dice</button>
+                                <button class="btn btn-danger" onclick="generateStrongPassword()">Generate A Strong Password</button>
+                                <button class="btn btn-danger" onclick="convertingString()">Converting String</button>
+                                <button class="btn btn-danger" onclick="convertingLength()">Controlling Length</button>
+                                <button class="btn btn-danger" onclick="calculateGst()">Calculate GST</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 ">
+                        <h4 class="text-center">Output / Result </h4>
+                        <div class=" border border rounded-3 p-4 text-center" style="min-height: 272px;">
+                            <audio  id="audio" src="audio/magic-spell-6005.mp3"></audio>
+                            <div id="output"></div>
+                            
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-dark mt-4 " id="clearOutputButton" >Clear output</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <!--footer-->
+ <footer id="color">
+    <div  class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 ">
+                <p class="mb-0 fw-bold text-center text-md-start">&copy; 2021. All Right Reserved.</p>
+            </div>
+            <div id="sheikh" class="d-none d-md-block  col-md-8 text-end ">
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="fw-bold  text-decoration-none">Terms &amp; conditions</a> |
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="fw-bold text-decoration-none">Privacy Plicy</a> |
+                <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="fw-bold  text-decoration-none">Order Policy</a> 
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+  
+
+
+   <!--Toastify-->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+   <!--Bootstrap.bundle. min.js-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Custom JS link-->
+    <script src="js/script.js"></script>
+</body>
+</html>
